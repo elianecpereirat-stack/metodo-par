@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Método PAR — Programa de Aceleração de Resultados (90 dias) | Eliane Tomás</title>
+  <meta name="description" content="Direção estratégica + comportamento + posicionamento digital para empresárias prestadoras de serviço que querem escalar com previsibilidade e leveza — sem perder a essência." />
+  <meta property="og:title" content="Método PAR — Programa de Aceleração de Resultados (90 dias)" />
+  <meta property="og:description" content="Direção estratégica + comportamento + posicionamento digital para empresárias prestadoras de serviço que querem escalar com previsibilidade e leveza — sem perder a essência." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero.webp" />
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    :root{
+      --bg:#fbfbfb; --ink:#0d0d0d; --muted:#4e5e5d;
+      --line:rgba(58,38,23,.18);
+      --teal:#456b5e; --bronze:#7d5037; --brown:#3a2617; --accent:#d02920; --paper:#f7f4dc;
+      --shadow: 0 18px 55px rgba(0,0,0,.10);
+      --r:18px; --r2:26px; --max:1080px;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; background:
+      radial-gradient(1100px 520px at 0% 0%, rgba(69,107,94,.16), transparent 55%),
+      radial-gradient(900px 520px at 100% 5%, rgba(125,80,55,.20), transparent 55%),
+      var(--bg);
+      color:var(--ink); font-family:var(--sans);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+    .topbar{position:sticky; top:0; z-index:20; background:rgba(251,251,251,.78); backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(78,94,93,.16);}
+    .row{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0;}
+    .logo{display:flex; align-items:center; gap:10px;}
+    .mark{width:38px; height:38px; border-radius:14px; background:linear-gradient(135deg, var(--teal), var(--bronze));
+      box-shadow:0 10px 22px rgba(0,0,0,.10);}
+    .logo b{letter-spacing:.2px}
+    .logo small{display:block; color:var(--muted);}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:12px 14px; border-radius:999px;
+      border:1px solid rgba(58,38,23,.18); background:rgba(255,255,255,.65); font-weight:700; text-decoration:none;
+      transition:.12s transform, .12s box-shadow;}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,0,0,.08);}
+    .btn.primary{background:linear-gradient(135deg, var(--accent), #a51f18); color:#fff; border-color:transparent;}
+    .btn.soft{background:rgba(69,107,94,.10); border-color:rgba(69,107,94,.22);}
+    .hero{padding:24px 0 12px;}
+    .heroGrid{display:grid; grid-template-columns:1fr; gap:14px;}
+    .pane{border:1px solid rgba(58,38,23,.16); border-radius:var(--r2); background:rgba(255,255,255,.72);
+      box-shadow:var(--shadow); overflow:hidden;}
+    .media{min-height:280px; background:url('assets/hero.webp') center/cover no-repeat; position:relative;}
+    .media:after{content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,.05));}
+    .media .tag{position:absolute; left:14px; bottom:14px; color:#fff; background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.22); padding:8px 10px; border-radius:999px; font-size:12px;}
+    .copy{padding:18px;}
+    h1{margin:0 0 8px; font-size:34px; line-height:1.05; letter-spacing:-.8px;}
+    .sub{margin:0 0 14px; color:var(--muted); line-height:1.6;}
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 14px;}
+    .chip{font-size:12px; padding:7px 10px; border-radius:999px; border:1px solid rgba(69,107,94,.22);
+      background:rgba(69,107,94,.10); color:var(--teal);}
+    .chip.b{border-color:rgba(125,80,55,.25); background:rgba(125,80,55,.12); color:var(--brown);}
+    .chip.r{border-color:rgba(208,41,32,.25); background:rgba(208,41,32,.10); color:var(--accent);}
+    .price{display:grid; gap:10px; padding:14px; border:1px dashed rgba(58,38,23,.22); border-radius:var(--r);
+      background:linear-gradient(180deg, rgba(247,244,220,.65), rgba(255,255,255,.35));}
+    .price strong{font-size:16px;}
+    .small{font-size:12.8px; color:var(--muted); line-height:1.55;}
+    .timer{display:none; font-family:var(--mono); font-size:12px; padding:10px 12px; border-radius:14px;
+      border:1px solid rgba(58,38,23,.18); background:rgba(255,255,255,.70);}
+    section{padding:18px 0;}
+    .titleRow{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:10px;}
+    h2{margin:0; font-size:18px;}
+    .cols2{display:grid; grid-template-columns:1fr; gap:12px;}
+    .card{border:1px solid rgba(58,38,23,.16); border-radius:var(--r); background:rgba(255,255,255,.70);
+      padding:16px; box-shadow:0 10px 24px rgba(0,0,0,.06);}
+    .card h3{margin:0 0 8px; font-size:14px;}
+    ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.65;}
+    .timeline{display:grid; gap:10px;}
+    .item{display:flex; gap:12px; align-items:flex-start; padding:14px; border-radius:var(--r);
+      background:rgba(247,244,220,.55); border:1px solid rgba(139,148,103,.35);}
+    .badge{width:32px; height:32px; border-radius:14px; display:grid; place-items:center;
+      background:linear-gradient(135deg, rgba(69,107,94,.22), rgba(125,80,55,.18));
+      border:1px solid rgba(58,38,23,.18); font-weight:800; color:var(--brown);}
+    .item b{display:block; margin-bottom:4px;}
+    .item p{margin:0; color:var(--muted); line-height:1.55; font-size:13px;}
+    .promise{border-left:4px solid rgba(69,107,94,.65); background:rgba(69,107,94,.08); padding:14px; border-radius:16px; color:var(--brown); line-height:1.6;}
+    .guarantee{border-left:4px solid rgba(208,41,32,.65); background:rgba(208,41,32,.06); padding:14px; border-radius:16px; color:var(--brown); line-height:1.6;}
+    .testis{display:grid; grid-template-columns:1fr; gap:12px;}
+    .t{border:1px solid rgba(58,38,23,.16); border-radius:var(--r); background:rgba(255,255,255,.75); padding:16px;}
+    .t p{margin:0 0 10px; line-height:1.6;}
+    .t small{color:var(--muted);}
+    .about{display:flex; gap:14px; align-items:center;}
+    .avatar{width:54px; height:54px; border-radius:18px; background:url('assets/eliane.webp') center/cover no-repeat;
+      border:1px solid rgba(58,38,23,.16);}
+    details{border:1px solid rgba(58,38,23,.16); border-radius:var(--r); background:rgba(255,255,255,.70); padding:12px 14px;}
+    summary{cursor:pointer; font-weight:700;}
+    details p{margin:10px 0 0; color:var(--muted); line-height:1.65;}
+    footer{padding:24px 0 90px; border-top:1px solid rgba(78,94,93,.14); color:var(--muted);}
+    .sticky{position:fixed; left:0; right:0; bottom:0; z-index:30; background:rgba(251,251,251,.82);
+      border-top:1px solid rgba(78,94,93,.16); backdrop-filter: blur(10px);}
+    .mini{display:grid; gap:2px;}
+    .mini b{font-size:12.5px; color:var(--brown);}
+    .mini span{font-size:11.5px;}
+    @media (min-width:860px){ .heroGrid{grid-template-columns: .95fr 1.05fr;} .media{min-height:540px;}
+      h1{font-size:44px;} .cols2{grid-template-columns:1fr 1fr;} .testis{grid-template-columns:repeat(3,1fr);}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap row">
+      <div class="logo">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <b>Método PAR</b>
+          <small>Programa de Aceleração • 90 dias</small>
+        </div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <a class="btn soft" id="btnWpTop" href="#" rel="noopener">WhatsApp</a>
+        <a class="btn primary" id="btnCheckoutTop" href="#" rel="noopener">Entrar</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero" id="topo">
+      <div class="heroGrid">
+        <div class="pane">
+          <div class="media"><div class="tag">Estratégia • Comportamento • Posicionamento</div></div>
+        </div>
+        <div class="pane">
+          <div class="copy">
+            <div class="chips">
+              <span class="chip">Acompanhamento</span>
+              <span class="chip b">Implementação</span>
+              <span class="chip r">2026 com previsibilidade</span>
+            </div>
+            <h1>Faça o seu negócio andar com direção — sem perder sua essência.</h1>
+            <p class="sub">Direção estratégica + comportamento + posicionamento digital para empresárias prestadoras de serviço que querem escalar com previsibilidade e leveza — sem perder a essência.</p>
+
+            <div class="timer" id="timerBox"><span>⏳ Oferta:</span> <b id="timerText">--</b></div>
+
+            <div class="price">
+              <strong>12x R$ 103,11 no cartão ou R$ 997 à vista</strong>
+              <div class="small">O PAR não promete milagre nem “faturamento garantido”. Promete processo, direção e execução guiada para você ganhar clareza, tomar decisões melhores e construir um modelo mais escalável — o resultado depende do seu contexto e da implementação.</div>
+              <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+                <a class="btn primary" id="btnCheckoutHero" href="#" rel="noopener">Quero entrar no PAR</a>
+                <a class="btn" id="btnWpHero" href="#" rel="noopener">Falar no WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="small" style="margin-top:12px;">
+              <b>Nota direta:</b> se você busca atalhos rasos, o PAR vai te contrariar. Se quer base sólida + ação, ele encaixa.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quem">
+      <div class="titleRow">
+        <h2>Escolha consciente</h2>
+        <div class="small">Uma página boa não tenta vender pra todo mundo.</div>
+      </div>
+      <div class="cols2">
+        <div class="card">
+          <h3>É para empresárias que:</h3>
+          <ul><li>Empresárias que sabem que ser diferente é sua maior vantagem</li>
+<li>Mulheres que querem escalar com leveza e previsibilidade sem perder essência</li>
+<li>Quem quer decisões mais assertivas e um plano claro de implementação</li>
+<li>Quem entende que comportamento influencia diretamente os resultados</li>
+<li>Quem quer estar em um grupo onde não precisa provar nada</li></ul>
+        </div>
+        <div class="card">
+          <h3>Não é para empresárias que:</h3>
+          <ul><li>Quem ainda busca “receita de bolo” pronta</li>
+<li>Quem não quer aparecer (voz/rosto/história) e quer ficar 100% nos bastidores</li>
+<li>Quem quer só ferramenta técnica sem mentalidade</li>
+<li>Quem precisa de validação externa o tempo todo para agir</li>
+<li>Quem não tem clareza/compromisso em empreender e escalar com intencionalidade</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="trilha">
+      <div class="titleRow">
+        <h2>Trilha (o mapa)</h2>
+        <div class="small">Sequência simples, execução consistente.</div>
+      </div>
+      <div class="timeline">
+        
+        <div class="item">
+          <div class="badge">1</div>
+          <div>
+            <b>Destravamento Interno</b>
+            <p>Aplicação prática com foco em clareza, decisão e rotina de implementação.</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="badge">2</div>
+          <div>
+            <b>Estratégia de Negócio</b>
+            <p>Aplicação prática com foco em clareza, decisão e rotina de implementação.</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="badge">3</div>
+          <div>
+            <b>Emoção e Comportamento</b>
+            <p>Aplicação prática com foco em clareza, decisão e rotina de implementação.</p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="badge">4</div>
+          <div>
+            <b>Posicionamento Digital</b>
+            <p>Aplicação prática com foco em clareza, decisão e rotina de implementação.</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="titleRow">
+        <h2>Como funciona</h2>
+        <div class="small">O desenho do programa.</div>
+      </div>
+      <div class="card"><ul><li>90 dias de acompanhamento (não é só curso gravado).</li>
+<li>1 encontro mensal em grupo: estrutura + ativação + mão na massa.</li>
+<li>Plano de implementação imediato: adaptar e aplicar na sua realidade.</li>
+<li>Aulas complementares gravadas (durante o acompanhamento).</li>
+<li>Grupo exclusivo de networking: insights diários, tira-dúvidas e premiações.</li>
+<li>Olhar individual: você tem minha orientação durante todo o processo.</li></ul></div>
+      <div class="promise" style="margin-top:12px;"><b>Promessa ajustada:</b><br/>O PAR não promete milagre nem “faturamento garantido”. Promete processo, direção e execução guiada para você ganhar clareza, tomar decisões melhores e construir um modelo mais escalável — o resultado depende do seu contexto e da implementação.</div>
+    </section>
+
+    <section id="bonus">
+      <div class="titleRow">
+        <h2>Bônus</h2>
+        <div class="small">Bônus que ajudam — não enfeitam.</div>
+      </div>
+      <div style="display:grid; gap:12px;">
+        <div class="card"><h3>✅ Aula com a Pamela Passoni (05/02/26)</h3><div class="small">Placeholder — confirme regras/datas antes de publicar.</div></div>
+<div class="card"><h3>✅ E-book: O Poder do DISC para uma Liderança Transformadora</h3><div class="small">Placeholder — confirme regras/datas antes de publicar.</div></div>
+<div class="card"><h3>✅ Sorteio de 2 devolutivas DISC (para quem fechar até 23:59)</h3><div class="small">Placeholder — confirme regras/datas antes de publicar.</div></div>
+<div class="card"><h3>✅ Encontro de direcionamento individual (para as 3 primeiras)</h3><div class="small">Placeholder — confirme regras/datas antes de publicar.</div></div>
+<div class="card"><h3>✅ Bônus surpresa</h3><div class="small">Placeholder — confirme regras/datas antes de publicar.</div></div>
+      </div>
+      <div class="guarantee" style="margin-top:12px;"><b>Garantia (modelo recomendado)</b><br/>Garantia de 7 dias: se dentro de 7 dias você entender que o PAR não faz sentido para você, peça cancelamento conforme as regras do checkout/plataforma. (Confira os detalhes no ato da compra.)</div>
+    </section>
+
+    <section id="depoimentos">
+      <div class="titleRow">
+        <h2>Depoimentos</h2>
+        <div class="small">Ilustrativos por enquanto.</div>
+      </div>
+      <div class="testis">
+        <div class="t"><p>“Eu parei de rodar em círculos e comecei a executar com um plano claro.”</p><small><b>Depoimento ilustrativo</b> • (substituir por print real)</small></div>
+        <div class="t"><p>“O que mudou foi minha tomada de decisão. Menos dúvida, mais ação.”</p><small><b>Depoimento ilustrativo</b> • (substituir por nome/segmento)</small></div>
+        <div class="t"><p>“A comunidade foi o empurrão: consistência virou resultado.”</p><small><b>Depoimento ilustrativo</b> • (substituir por prova social)</small></div>
+      </div>
+      <div class="small" style="margin-top:10px;">Recomendação: 1 print curto + 1 frase + contexto. Se tiver número, melhor.</div>
+    </section>
+
+    <section id="sobre">
+      <div class="titleRow">
+        <h2>Quem é a mentora</h2>
+        <div class="small">Confiança vem de clareza.</div>
+      </div>
+      <div class="card about">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <b>Eliane Tomás</b><br/>
+          <span class="small">@eliane_ptomas • Mentora do Método PAR</span><br/>
+          <span class="small">Acompanho empresárias prestadoras de serviço a tomarem decisões melhores, estruturarem o negócio e escalarem com leveza.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="titleRow">
+        <h2>FAQ</h2>
+        <div class="small">Sem “pegadinha” depois.</div>
+      </div>
+      <div style="display:grid; gap:12px;">
+        <details><summary>Preciso aparecer nas redes?</summary><p>Sim, pelo menos o mínimo viável. O PAR inclui posicionamento digital para vender com consistência.</p></details>
+        <details><summary>O PAR é só conteúdo?</summary><p>Não. Foi desenhado para acompanhamento e implementação. Aulas gravadas são complemento.</p></details>
+        <details><summary>Tem garantia?</summary><p>Garantia de 7 dias: se dentro de 7 dias você entender que o PAR não faz sentido para você, peça cancelamento conforme as regras do checkout/plataforma. (Confira os detalhes no ato da compra.)</p></details>
+        <details><summary>Isso garante faturamento?</summary><p>Não. Você recebe processo e direção; o resultado depende do seu contexto e do que você implementa.</p></details>
+      </div>
+    </section>
+
+    <section id="cta-final">
+      <div class="pane" style="padding:16px;">
+        <div class="titleRow" style="margin:0 0 10px;">
+          <h2>Pronta para um 2026 mais previsível?</h2>
+          <div class="small">Sem perder a sua essência.</div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a class="btn primary" id="btnCheckoutBottom" href="#" rel="noopener">Quero entrar no PAR</a>
+          <a class="btn" id="btnWpBottom" href="#" rel="noopener">Falar no WhatsApp</a>
+        </div>
+        <div class="small" style="margin-top:10px;">Ao comprar, confira termos e política na plataforma de pagamento.</div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small"><b>Método PAR</b> • Eliane Tomás • Instagram: @eliane_ptomas<br/>
+      <span>Links úteis: <a id="lnkTerms" href="#">Termos</a> • <a id="lnkPrivacy" href="#">Privacidade</a></span></div>
+    </footer>
+  </main>
+
+  <div class="sticky">
+    <div class="wrap row">
+      <div class="mini">
+        <b>12x R$ 103,11 no cartão ou R$ 997 à vista</b>
+        <span>Condições e vagas: confirme no checkout.</span>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <a class="btn soft" id="btnWpSticky" href="#" rel="noopener">WhatsApp</a>
+        <a class="btn primary" id="btnCheckoutSticky" href="#" rel="noopener">Entrar</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CONFIG = {
+      checkoutUrl: "https://SEU-LINK-DE-CHECKOUT-AQUI",
+      whatsappNumber: "55DDDNÚMEROAQUI",
+      whatsappText: "Olá! Quero detalhes do Método PAR (90 dias).",
+      showTimer: true,
+      offerEndsAt: "2026-12-31T23:59:59-03:00",
+      privacyUrl: "#",
+      termsUrl: "#",
+      utm: "utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_campaign=metodo_par"
+    };
+
+    const withUtm = (url) => {
+      if(!url || url === "#") return url;
+      const hasQuery = url.includes("?");
+      return url + (hasQuery ? "&" : "?") + CONFIG.utm;
+    };
+
+    const wpUrl = () => {
+      const n = CONFIG.whatsappNumber.replace(/\D/g,"");
+      const t = encodeURIComponent(CONFIG.whatsappText);
+      return withUtm(`https://wa.me/${n}?text=${t}`);
+    };
+
+    const setHref = (id, url) => {
+      const el = document.getElementById(id);
+      if(el) el.href = url;
+    };
+
+    function bindCtas() {
+      const checkout = withUtm(CONFIG.checkoutUrl);
+      const wp = wpUrl();
+      ["btnCheckoutTop","btnCheckoutHero","btnCheckoutBottom","btnCheckoutSticky"].forEach(id=>setHref(id, checkout));
+      ["btnWpTop","btnWpHero","btnWpBottom","btnWpSticky"].forEach(id=>setHref(id, wp));
+      setHref("lnkPrivacy", CONFIG.privacyUrl);
+      setHref("lnkTerms", CONFIG.termsUrl);
+    }
+
+    function startTimer() {
+      const box = document.getElementById("timerBox");
+      const txt = document.getElementById("timerText");
+      if(!CONFIG.showTimer || !box || !txt) return;
+      const end = new Date(CONFIG.offerEndsAt).getTime();
+      if(!isFinite(end)) return;
+      box.style.display = "inline-block";
+      const tick = () => {
+        const now = Date.now();
+        const diff = Math.max(0, end - now);
+        const s = Math.floor(diff/1000);
+        const d = Math.floor(s/86400);
+        const h = Math.floor((s%86400)/3600);
+        const m = Math.floor((s%3600)/60);
+        const ss = s%60;
+        txt.textContent = `${d}d ${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}:${String(ss).padStart(2,"0")}`;
+      };
+      tick(); setInterval(tick, 1000);
+    }
+
+    bindCtas();
+    startTimer();
+  </script>
+</body>
+</html>
