@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Método PAR | Programa de Aceleração de Resultados (90 dias)</title>
+  <meta name="description" content="Método PAR: um programa de 90 dias para empresárias prestadoras de serviço acelerarem resultados com clareza, previsibilidade e leveza — sem perder a essência." />
+  <meta name="theme-color" content="#020d22" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Open Graph (troque as URLs absolutas após hospedar) -->
+  <meta property="og:title" content="Método PAR | Acelere seus resultados em 90 dias" />
+  <meta property="og:description" content="Programa de aceleração para empresárias prestadoras de serviço. Decisões mais assertivas, escala com previsibilidade e leveza, sem perder a essência." />
+  <meta property="og:image" content="https://SEU-DOMINIO.com/assets/hero.webp" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      /* Paleta solicitada */
+      --bg:#1c7571;                   /* plano de fundo */
+      --paper: rgba(237,237,235,.96);   /* texto/elementos claros */
+      --paper2: rgba(237,237,235,.92);
+      --sand: rgba(237,237,235,.90);
+
+      --ink: rgba(237,237,235,.96);
+      --muted: rgba(237,237,235,.80);
+      --muted2: rgba(237,237,235,.62);
+
+      --navy:#020d22;                    /* contraste/base */
+      --teal:#1c7571;
+      --teal2:#1c7571;
+      --brown:#020d22;
+
+      /* Compatibilidade com nomes antigos do layout */
+      --copper:#020d22;
+      --copper2:#020d22;
+      --olive:#1c7571;
+      --red:#020d22;
+
+      --radius:18px;
+      --shadow: 0 18px 55px rgba(0,0,0,.28);
+      --shadow2: 0 10px 28px rgba(0,0,0,.20);
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--paper);
+      background:
+        radial-gradient(1200px 700px at 12% 0%, rgba(2,13,34,.35), transparent 60%),
+        radial-gradient(900px 650px at 88% 10%, rgba(237,237,235,.12), transparent 62%),
+        radial-gradient(900px 700px at 60% 92%, rgba(2,13,34,.22), transparent 65%),
+        var(--bg);
+
+      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+
+    /* Top bar */
+    .top{
+      position:sticky; top:0; z-index:60;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,.56);
+      border-bottom: 1px solid rgba(242,242,242,.08);
+    }
+    .top .row{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.3px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, rgba(237,237,235,.95), rgba(2,13,34,.95));
+      box-shadow: 0 0 0 4px rgba(208,41,32,.12);
+    }
+    .nav{
+      display:none;
+      gap:14px;
+      font-size:13px;
+      color:var(--muted2);
+    }
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1; color:var(--paper)}
+    @media(min-width:900px){ .nav{display:flex} }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid rgba(242,242,242,.16);
+      background: rgba(251,251,251,.06);
+      color:var(--paper);
+      box-shadow: var(--shadow2);
+      transition: transform .12s ease, filter .12s ease, background .12s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); filter:brightness(1.05)}
+    .btn:active{transform: translateY(0px); filter:brightness(.98)}
+    .btn.primary{
+      border-color: rgba(237,237,235,.22);
+      background: linear-gradient(135deg, rgba(2,13,34,.96), rgba(2,13,34,.86));
+    }
+    .btn.ghost{
+      border-color: rgba(69,107,94,.35);
+      background: linear-gradient(135deg, rgba(69,107,94,.35), rgba(67,96,94,.12));
+    }
+
+    /* Hero */
+    .hero{padding:28px 0 10px}
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:900px){
+      .hero{padding:40px 0 18px}
+      .grid{grid-template-columns: 1.1fr .9fr; gap:26px; align-items:stretch;}
+    }
+
+    .card{
+      border:1px solid rgba(242,242,242,.10);
+      background: linear-gradient(180deg, rgba(251,251,251,.06), rgba(242,242,242,.03));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .pad{padding:18px}
+    @media(min-width:900px){ .pad{padding:22px} }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:800; font-size:12px;
+      letter-spacing:.5px; text-transform:uppercase;
+      color: var(--sand);
+      opacity:.92;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(247,244,220,.18);
+      background: rgba(247,244,220,.06);
+      font-size:12px;
+    }
+
+    h1{
+      margin:10px 0 10px;
+      font-size: 34px;
+      line-height:1.08;
+      letter-spacing:-.6px;
+    }
+    @media(min-width:900px){ h1{font-size:44px} }
+
+    .lead{
+      margin:0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    @media(min-width:900px){ .lead{font-size:18px} }
+
+    .bullets{display:grid; gap:10px; margin:16px 0 18px}
+    .b{
+      display:flex; gap:10px; align-items:flex-start;
+      color: var(--paper2);
+      opacity:.95;
+    }
+    .mark{
+      width:22px; height:22px; border-radius:7px;
+      background: rgba(69,107,94,.20);
+      border:1px solid rgba(69,107,94,.30);
+      flex:0 0 22px;
+      display:flex; align-items:center; justify-content:center;
+      margin-top:2px;
+    }
+    .mark span{font-weight:900; color: var(--sand); font-size:12px}
+
+    .ctaRow{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+    .mini{font-size:12px; color:var(--muted2); margin-top:10px}
+
+    /* Hero media */
+    .media{
+      position:relative;
+      min-height: 260px;
+    }
+    @media(min-width:900px){ .media{min-height: 100%} }
+    .media img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      filter: contrast(1.03) saturate(1.02);
+      transform: scale(1.01);
+    }
+    .media:after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.70));
+      pointer-events:none;
+    }
+    .media .overlay{
+      position:absolute; inset:auto 14px 14px 14px;
+      z-index:2;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .timer{
+      display:none;
+      gap:10px; flex-wrap:wrap;
+    }
+    .timer.on{display:flex}
+    .tbox{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(242,242,242,.14);
+      background: rgba(0,0,0,.35);
+      min-width: 92px;
+      text-align:center;
+    }
+    .tbox b{display:block; font-size:18px}
+    .tbox span{display:block; font-size:11px; color:var(--muted2); letter-spacing:.6px; text-transform:uppercase}
+
+    /* Section */
+    section{padding:24px 0}
+    @media(min-width:900px){ section{padding:34px 0} }
+    .titleRow{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:14px;
+    }
+    h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+    .sub{
+      margin:6px 0 0;
+      color: var(--muted);
+      font-size:14px;
+      max-width: 70ch;
+    }
+
+    .cols{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:900px){
+      .cols{grid-template-columns: 1fr 1fr; gap:18px}
+    }
+
+    .list{
+      display:grid; gap:10px;
+      margin:0; padding:0; list-style:none;
+    }
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(242,242,242,.10);
+      background: rgba(251,251,251,.04);
+    }
+    .icon{
+      width:22px; height:22px; border-radius:8px;
+      display:flex; align-items:center; justify-content:center;
+      flex:0 0 22px;
+      margin-top:2px;
+      font-weight:900; font-size:12px;
+    }
+    .ok{background: rgba(69,107,94,.22); border:1px solid rgba(69,107,94,.35)}
+    .no{background: rgba(208,41,32,.16); border:1px solid rgba(208,41,32,.28)}
+    .li p{margin:0; color:var(--paper2); opacity:.95}
+    .li p b{color:var(--sand)}
+
+    /* Cards grid */
+    .cards{
+      display:grid; gap:12px;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:700px){ .cards{grid-template-columns: 1fr 1fr} }
+    @media(min-width:1100px){ .cards{grid-template-columns: 1fr 1fr 1fr 1fr} }
+
+    .feat{
+      padding:14px 14px;
+      border-radius: 18px;
+      border:1px solid rgba(242,242,242,.10);
+      background: linear-gradient(180deg, rgba(251,251,251,.05), rgba(242,242,242,.03));
+    }
+    .feat h3{margin:0 0 6px; font-size:15px}
+    .feat p{margin:0; color:var(--muted); font-size:13px}
+
+    /* Value stack */
+    .stack{
+      display:grid; gap:12px;
+    }
+    @media(min-width:900px){ .stack{grid-template-columns: 1.2fr .8fr} }
+    .value{
+      display:grid; gap:10px;
+    }
+    .vitem{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(242,242,242,.10);
+      background: rgba(251,251,251,.04);
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .vitem .badge{
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      background: rgba(247,244,220,.08);
+      border:1px solid rgba(247,244,220,.16);
+      color: var(--sand);
+      white-space:nowrap;
+      margin-top:1px;
+    }
+    .vitem p{margin:0; color:var(--paper2); opacity:.95}
+    .price{
+      padding:18px;
+      border-radius: 18px;
+      border:1px solid rgba(208,41,32,.28);
+      background: linear-gradient(135deg, rgba(208,41,32,.12), rgba(125,80,55,.14));
+      box-shadow: var(--shadow2);
+      position:sticky;
+      top:84px;
+      align-self:start;
+    }
+    .price small{display:block; color:var(--muted2)}
+    .big{
+      font-size:34px; font-weight:900; margin:6px 0 2px; letter-spacing:-.6px;
+    }
+    .strike{color:var(--muted2); text-decoration: line-through}
+    .price .line{height:1px; background:rgba(242,242,242,.12); margin:12px 0}
+    .price .btn{width:100%}
+
+    /* About */
+    .about{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr;
+      align-items:center;
+    }
+    @media(min-width:900px){ .about{grid-template-columns: .7fr 1.3fr; gap:18px} }
+    .portrait{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(242,242,242,.10);
+      background: rgba(251,251,251,.03);
+    }
+    .portrait img{width:100%; height:100%; display:block; object-fit:cover}
+    .about p{color:var(--muted); margin:0}
+
+    /* FAQ */
+    details{
+      border:1px solid rgba(242,242,242,.10);
+      background: rgba(251,251,251,.04);
+      border-radius: 16px;
+      padding: 12px 12px;
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:900;
+      outline:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color:var(--muted)}
+
+    /* Footer */
+    footer{
+      padding: 28px 0 90px;
+      color: var(--muted2);
+      font-size: 12px;
+      border-top:1px solid rgba(242,242,242,.08);
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+    }
+    footer a{text-decoration:underline}
+
+    /* Sticky CTA (mobile) */
+    .stickyCta{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      padding:10px 12px;
+      background: rgba(0,0,0,.62);
+      border-top:1px solid rgba(242,242,242,.10);
+      backdrop-filter: blur(10px);
+      z-index:70;
+    }
+    .stickyCta .wrap{
+      display:flex; gap:10px;
+    }
+    @media(min-width:900px){ .stickyCta{display:none} }
+
+    /* Small utility */
+    .muted{color:var(--muted)}
+    .note{
+      border-left:3px solid rgba(247,244,220,.35);
+      padding-left:12px;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:12px;
+    }
+  
+    /* Provas sociais */
+    .proofGrid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    .proofImg{
+      display:block;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(237,237,235,.16);
+      background: rgba(2,13,34,.28);
+      box-shadow: var(--shadow2);
+      transition: transform .12s ease;
+    }
+    .proofImg:hover{ transform: translateY(-2px); }
+    .proofImg img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    @media (min-width:840px){
+      .proofGrid{ grid-template-columns:repeat(2,1fr); }
+    }
+
+
+    /* Depoimentos em carrossel */
+    .tCarousel{
+      position:relative;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:8px;
+    }
+    .tViewport{
+      flex:1;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      -webkit-overflow-scrolling:touch;
+      border-radius: var(--radius);
+      outline: none;
+    }
+    .tTrack{
+      display:flex;
+      gap:12px;
+      padding: 4px 2px 10px;
+    }
+    .tSlide{
+      flex: 0 0 86%;
+      max-width: 86%;
+      scroll-snap-align: center;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(237,237,235,.16);
+      background: rgba(2,13,34,.28);
+      box-shadow: var(--shadow2);
+      margin:0;
+    }
+    .tSlide img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .tNav{
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      border:1px solid rgba(237,237,235,.18);
+      background: rgba(2,13,34,.45);
+      color: rgba(237,237,235,.92);
+      font-size:26px;
+      line-height:1;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+      transition: transform .12s ease;
+      user-select:none;
+    }
+    .tNav:hover{ transform: translateY(-1px); }
+    .tNav:active{ transform: translateY(0px) scale(.98); }
+    .tDots{
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      align-items:center;
+      margin-top:10px;
+    }
+    .tDot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      border:1px solid rgba(237,237,235,.28);
+      background: rgba(237,237,235,.18);
+      cursor:pointer;
+    }
+    .tDot[aria-current="true"]{
+      background: rgba(237,237,235,.92);
+      border-color: rgba(237,237,235,.72);
+      transform: scale(1.1);
+    }
+    @media (min-width:840px){
+      .tSlide{ flex: 0 0 48%; max-width:48%; }
+    }
+    @media (max-width:420px){
+      .tSlide{ flex-basis: 92%; max-width: 92%; }
+      .tNav{ width:44px; height:44px; font-size:24px; }
+    }
+    }
+
+
+    /* Refinos: mesma largura visual das outras sections (usa .card + .pad) */
+    #depoimentos .tCarousel{ margin-top: 0; }
+    #depoimentos .tViewport{
+      border: 1px solid rgba(237,237,235,.14);
+      background: rgba(2,13,34,.22);
+    }
+    #depoimentos .tTrack{ padding: 6px 6px 10px; }
+    #depoimentos .tSlide{ background: rgba(2,13,34,.22); }
+    #depoimentos .tSlide img{
+      max-height: 980px;
+      object-fit: contain;
+      background: rgba(2,13,34,.18);
+    }
+    @media (min-width:840px){
+      #depoimentos .tSlide img{ max-height: 920px; }
+    }
+
+
+    /* Navegação melhorada (web + mobile): setas sobrepostas */
+    .tCarousel{
+      position: relative;
+      display: block; /* mantém largura do container */
+    }
+    .tViewport{ width:100%; }
+    .tNav{
+      position:absolute;
+      top:50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      width:48px;
+      height:48px;
+      border-radius:999px;
+      border:1px solid rgba(237,237,235,.22);
+      background: rgba(2,13,34,.55);
+      backdrop-filter: blur(6px);
+      color: rgba(237,237,235,.94);
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+    }
+    .tNav.prev{ left:10px; }
+    .tNav.next{ right:10px; }
+    .tNav:hover{ transform: translateY(-50%) translateY(-1px); }
+    .tNav:active{ transform: translateY(-50%) scale(.98); }
+
+    /* Evita que as setas cubram conteúdo */
+    .tTrack{ padding-left: 58px; padding-right: 58px; }
+
+    @media (max-width:420px){
+      .tNav{ width:44px; height:44px; left:8px; right:8px; }
+      .tTrack{ padding-left: 52px; padding-right: 52px; }
+    }
+
+
+    /* LinkedIn-like carousel (depoimentos) */
+    .liCarousel{ margin-top: 6px; }
+    .liViewport{
+      position: relative;
+      touch-action: pan-y;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(237,237,235,.16);
+      background: rgba(2,13,34,.28);
+      box-shadow: var(--shadow2);
+      outline: none;
+    }
+    .liTrack{
+      display:flex;
+      will-change: transform;
+      transition: transform .24s ease;
+      transform: translateX(0%);
+    }
+    .liSlide{
+      flex: 0 0 100%;
+      max-width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 24px; /* espaço para setas (ajustado) */
+      min-height: 640px;
+      background: rgba(2,13,34,.18);
+    }
+    .liSlide img{
+      width: 100%;
+      height: auto;
+      max-height: 980px;
+      object-fit: contain;
+      display:block;
+      border-radius: 14px;
+      background: rgba(2,13,34,.16);
+    }
+
+    /* Setas overlay (sempre visíveis, web e mobile) */
+    .liNav{
+      position:absolute;
+      top:50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      border: 1px solid rgba(237,237,235,.20);
+      background: rgba(2,13,34,.62);
+      color: rgba(237,237,235,.96);
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+      backdrop-filter: blur(6px);
+      user-select:none;
+    }
+    .liNav span{ font-size: 28px; line-height: 1; }
+    .liPrev{ left:10px; }
+    .liNext{ right:10px; }
+    .liNav[disabled]{
+      opacity:.35;
+      cursor:not-allowed;
+    }
+    .liNav:hover:not([disabled]){ transform: translateY(-50%) translateY(-1px); }
+    .liNav:active:not([disabled]){ transform: translateY(-50%) scale(.98); }
+
+    /* Contador no canto superior direito (1/4) */
+    .liCounter{
+      position:absolute;
+      top:10px;
+      right:10px;
+      z-index: 6;
+      font-size: 12px;
+      letter-spacing:.2px;
+      color: rgba(237,237,235,.96);
+      background: rgba(2,13,34,.62);
+      border: 1px solid rgba(237,237,235,.16);
+      border-radius: 999px;
+      padding: 6px 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* Dots */
+    .liDots{
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      align-items:center;
+      margin-top:10px;
+    }
+    .liDot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      border: 1px solid rgba(237,237,235,.28);
+      background: rgba(237,237,235,.18);
+      cursor:pointer;
+    }
+    .liDot[aria-current="true"]{
+      background: rgba(237,237,235,.92);
+      border-color: rgba(237,237,235,.72);
+      transform: scale(1.1);
+    }
+
+    /* Responsivo */
+    @media (max-width:520px){
+      /* Mais imagem, menos “margem”: aumenta largura útil e, por consequência, altura */
+      .liSlide{
+        padding: 10px 14px;     /* antes: 48px (reduzia demais a imagem) */
+        min-height: 78vh;       /* deixa o bloco realmente “grande” no mobile */
+      }
+      .liSlide img{
+        width: 100%;
+        height: 78vh;           /* força ocupar a altura do slide */
+        max-height: 78vh;
+        object-fit: contain;
+        border-radius: 12px;
+      }
+      .liNav{ width:40px; height:40px; }
+      .liNav span{ font-size: 26px; }
+      .liPrev{ left:8px; }
+      .liNext{ right:8px; }
+      .liCounter{ top:8px; right:8px; }
+    }
+
+</style>
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="row">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Método PAR</span>
+        </div>
+
+        <nav class="nav" aria-label="Navegação">
+          <a href="#paraquem">Para quem é</a>
+          <a href="#como">Como funciona</a>
+          <a href="#trilha">Trilha</a>
+          <a href="#bonus">Bônus</a>
+          <a href="#faq">Dúvidas</a>
+        </nav>
+
+        <a class="btn primary" id="topCta" href="#investimento">Quero entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="grid">
+          <div class="card">
+            <div class="pad">
+              
+
+            
+              <h1>Transforme seu negócio e sua presença online em clientes imediatos.</h1>
+              <p>Implemente o método e escale seu faturamento em 90 dias, sem exaustão, sem Hacks aleatórios e sem se perder na estratégias.</p>
+
+              <p class="lead">
+                Descubra um método que junta mente, comportamento e estratégia para finalmente vender com previsibilidade.
+              </p>
+
+
+
+              <div class="ctaRow">
+                <a class="btn primary" id="heroCta" href="#investimento">Quero Minha Transformação em 90 Dias</a>
+                <a class="btn ghost" id="heroWhats" href="#" rel="noopener">Falar no WhatsApp</a>
+              </div>
+
+              <div class="mini">
+                Buscando um método que te guie passo a passo? Você está no lugar certo. 🙂
+              </div>
+            </div>
+          </div>
+
+          <div class="card media" aria-label="Foto do evento">
+            <img src="assets/hero.webp" alt="Eliane em um evento, falando ao microfone." loading="eager" />
+            <div class="overlay">
+              <div class="timer" id="timer">
+                <div class="tbox"><b id="d">00</b><span>dias</span></div>
+                <div class="tbox"><b id="h">00</b><span>horas</span></div>
+                <div class="tbox"><b id="m">00</b><span>min</span></div>
+                <div class="tbox"><b id="s">00</b><span>seg</span></div>
+              </div>
+              <a class="btn primary" id="mediaCta" href="#investimento">Garantir minha vaga</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Benefícios do Método PAR</h2>
+            <p class="sub">O PAR NÃO É SÓ UMA MENTORIA, <br>É UM PLANO DE IMPLEMENTAÇÃO QUE TE POSSIBILITA:</p>
+          </div>
+        </div>
+
+        <div class="cards" style="grid-template-columns:1fr; gap:10px">
+          <div class="vitem">
+            <span class="badge">1</span>
+            <p>“Sair da indecisão e ganhar clareza estratégica que te permite postar com confiança e vender de verdade.”</p>
+          </div>
+          <div class="vitem">
+            <span class="badge">2</span>
+            <p>“Ter um plano pronto que funciona para o seu nicho em vez de adivinhar o que postar.”</p>
+          </div>
+          <div class="vitem">
+            <span class="badge">3</span>
+            <p>“Conquistar escala e  previsibilidade de vendas mês a mês sem se sentir perdida no processo.”</p>
+          </div>
+          <div class="vitem">
+            <span class="badge">4</span>
+            <p>“Descobrir como seu comportamento pode acelerar seus resultados financeiros, vendendo com leveza e essência sem se perder de si mesma”'</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUEM É -->
+    <section id="paraquem">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Para quem é (e para quem NÃO é)</h2>
+            <p class="sub">Clareza economiza energia. E energia é o ativo mais caro de uma empresária.</p>
+          </div>
+        </div>
+
+        <div class="cols">
+          <div class="card">
+            <div class="pad">
+              <h3 style="margin:0 0 10px">É para empresárias que:</h3>
+              <ul class="list">
+                <li class="li"><span class="icon ok">✓</span><p><b>Sabem que ser diferente</b> é vantagem competitiva — e querem usar isso a favor do faturamento.</p></li>
+                <li class="li"><span class="icon ok">✓</span><p>Querem um grupo onde <b>não precisam provar nada</b>, porque a base aqui é confiança + execução.</p></li>
+                <li class="li"><span class="icon ok">✓</span><p>Desejam escalar de forma <b>acelerada e assertiva</b> nos próximos 90 dias.</p></li>
+                <li class="li"><span class="icon ok">✓</span><p>Querem previsibilidade e leveza <b>sem perder essência</b> nem virar “personagem”.</p></li>
+                <li class="li"><span class="icon ok">✓</span><p>Entendem que comportamento influencia diretamente resultados — e topam olhar para isso de frente.</p></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="pad">
+              <h3 style="margin:0 0 10px">NÃO é para empresárias que:</h3>
+              <ul class="list">
+                <li class="li"><span class="icon no">✕</span><p>Ainda querem <b>“receita de bolo”</b> pronta.</p></li>
+                <li class="li"><span class="icon no">✕</span><p>Não querem aparecer e desejam ficar 100% nos bastidores <b>sem usar voz/rosto/história</b>.</p></li>
+                <li class="li"><span class="icon no">✕</span><p>Querem só ferramentas técnicas “sem mentalidade”. Aqui o foco é <b>posicionamento duradouro</b>, não atalho raso.</p></li>
+                <li class="li"><span class="icon no">✕</span><p>Buscam validação externa constante antes de agir.</p></li>
+                <li class="li"><span class="icon no">✕</span><p>Não têm clareza se querem empreender e não estão comprometidas em crescer com intencionalidade.</p></li>
+              </ul>
+
+              <div class="note">
+                Tradição que funciona: fundamentos + execução. Visionário de verdade não foge do básico — ele domina o básico.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Como funciona o Método PAR</h2>
+            <p class="sub">Não é “curso gravado para virar pó” na nuvem. É acompanhamento com implementação.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pad">
+            <div class="cards" style="grid-template-columns:1fr; gap:10px">
+              <div class="vitem">
+                <span class="badge">Formato</span>
+                <p>Processo de <b>90 dias</b> com <b>1 encontro mensal em grupo</b> (ao vivo) + ativação de mentalidade, comportamento e mão na massa.</p>
+              </div>
+              <div class="vitem">
+                <span class="badge">Ritmo</span>
+                <p>Você sai de cada encontro com <b>plano imediato</b> — “copiar e colar” adaptado para seu nicho e realidade.</p>
+              </div>
+              <div class="vitem">
+                <span class="badge">Conteúdo</span>
+                <p>Aulas complementares gravadas para potencializar sua estrutura, disponíveis durante o processo.</p>
+              </div>
+              <div class="vitem">
+                <span class="badge">Rede</span>
+                <p><b>Grupo exclusivo</b> de networking com insights, tira-dúvidas, acompanhamento e premiações para as mais engajadas.</p>
+              </div>
+              <div class="vitem">
+                <span class="badge">Olhar</span>
+                <p>Mesmo sendo em grupo, você tem <b>olhar individual</b> sobre o seu negócio: direção, correção de rota e foco no que dá retorno.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRILHA -->
+    
+    
+    
+    <section id="depoimentos">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>O que dizem as alunas</h2>
+            <p class="sub">Resultados reais de quem implementou o Método PAR e transformou seu negócio em 90 dias.</p>
+          </div>
+        </div>
+
+        <div class="liCarousel" data-li-carousel>
+          <div class="liViewport" tabindex="0" role="region" aria-label="Carrossel de depoimentos">
+            <div class="liTrack">
+              <div class="liSlide"><img src="assets/provas/prova-1.png" alt="Depoimento 1 (print)" loading="lazy" /></div>
+              <div class="liSlide"><img src="assets/provas/prova-2.png" alt="Depoimento 2 (print)" loading="lazy" /></div>
+              <div class="liSlide"><img src="assets/provas/prova-3.png" alt="Depoimento 3 (print)" loading="lazy" /></div>
+              <div class="liSlide"><img src="assets/provas/prova-4.png" alt="Depoimento 4 (print)" loading="lazy" /></div>
+            </div>
+
+            <button class="liNav liPrev" type="button" aria-label="Anterior">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button class="liNav liNext" type="button" aria-label="Próximo">
+              <span aria-hidden="true">›</span>
+            </button>
+
+            <div class="liCounter" aria-live="polite">1 / 4</div>
+</div>
+
+          <div class="liDots" aria-label="Navegação do carrossel"></div>
+        </div>
+      </div>
+    </section>
+<section id="trilha">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Trilha Método PAR</h2>
+            <p class="sub">Quatro pilares que se conversam. Porque negócio não escala com “pedaços soltos”.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="feat">
+            <h3>Destravamento Interno</h3>
+            <p>Ferramentas de destravamento e reprogramação para abrir caminho para resultados reais.</p>
+          </div>
+          <div class="feat">
+            <h3>Estratégia de Negócio</h3>
+            <p>Diagnóstico e direcionamento para ajustar produto, oferta, vendas e previsibilidade.</p>
+          </div>
+          <div class="feat">
+            <h3>Emoção &amp; Comportamento</h3>
+            <p>Padrões, gatilhos, autossabotagem e decisões alinhadas com quem você é.</p>
+          </div>
+          <div class="feat">
+            <h3>Posicionamento Digital</h3>
+            <p>Estrutura para vender pelas redes sociais com consistência e autenticidade.</p>
+          </div>
+        </div>
+
+        <div class="note">
+          “Não é só mais um método no mercado”: sem hacks genéricos, sem promessa vazia. É um processo para construir base sólida e crescer com energia protegida.
+        </div>
+      </div>
+    </section>
+
+    <!-- O QUE VOCÊ RECEBE + INVESTIMENTO -->
+    <section id="investimento">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>O que você recebe</h2>
+            <p class="sub">Um pacote de implementação pensado para virar resultado — não para virar “mais um PDF bonito”.</p>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="value">
+            <div class="vitem">
+              <span class="badge">Diagnóstico</span>
+              <p><b>Estratégico do negócio</b>: produtos, vendas e posicionamento (onde está travando e onde está “vazando dinheiro”).</p>
+            </div>
+            <div class="vitem">
+              <span class="badge">Diagnóstico</span>
+              <p><b>Emocional e comportamental</b>: padrões, gatilhos e autossabotagens que aparecem quando você precisa decidir rápido.</p>
+            </div>
+            <div class="vitem">
+              <span class="badge">Processo</span>
+              <p>Direcionamento assertivo para decisões alinhadas com sua identidade — <b>sem perder essência</b> no caminho.</p>
+            </div>
+            <div class="vitem">
+              <span class="badge">Comunidade</span>
+              <p>Networking + acompanhamento + tira-dúvidas durante o programa.</p>
+            </div>
+
+            <div class="note">
+              Resultados variam conforme aplicação, esforço e contexto. Aqui a promessa é processo bem desenhado + direção — o resto é execução.
+            </div>
+          </div>
+
+          <aside class="price">
+            <small>Investimento (oferta da “sala secreta”)</small>
+            <div class="big">12x R$ 134,14</div>
+            <small>ou <b>R$ 1.297,00</b> à vista</small>
+
+            <div class="line"></div>
+
+            <a class="btn primary" id="checkoutBtn" href="#" rel="noopener">Quero garantir minha vaga</a>
+            <a class="btn ghost" id="whatsBtn" href="#" rel="noopener" style="margin-top:10px">Tenho uma dúvida rápida</a>
+
+            <div class="mini" style="margin-top:12px">
+              Pagamento e entrega: configure o link do checkout e/ou WhatsApp no arquivo <b>index.html</b> (CONFIG).
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- BÔNUS -->
+    <section id="bonus">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Bônus especiais</h2>
+            <p class="sub">O tipo de extra que faz diferença quando você está implementando de verdade.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="feat">
+            <h3>Bônus 1</h3>
+            <p>Aula sobre posicionamento digital com a <b>Pamela Passoni.</b></p>
+
+          </div>
+          <div class="feat">
+            <h3>Bônus 2</h3>
+            <p>E-book: <b>O Poder do DISC para uma Liderança Transformadora</b>.</p>
+          </div>
+          <div class="feat">
+            <h3>Bônus 3</h3>
+            <p>Participação do sorteio de <b>2 devolutivas DISC</b>.</p>
+          </div>
+          <div class="feat">
+            <h3>Bônus 4</h3>
+            <p>Sorteio de encontro de direcionamento individual.</p>
+          </div>
+          <div class="feat" style="grid-column:1/-1">
+            <h3>Bônus 5</h3>
+            <p><b>Surpresa</b> — entregue durante o processo para as mais engajadas.</p>
+          </div>
+        </div>
+
+        <div class="note">
+          As primeiras a fechar tem maior chance de ganhar os bônus mais exclusivos. Mas, no geral, o foco é entregar valor real para quem está comprometida em implementar.
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Quem é Eliane Tomás</h2>
+            <p class="sub">Mentora e empresária. Método validado na própria empresa e em alunas.</p>
+          </div>
+        </div>
+
+        <div class="about">
+          <div class="portrait">
+            <img src="assets/eliane.webp" alt="Retrato de Eliane Tomás." loading="lazy" />
+          </div>
+
+          <div class="card">
+            <div class="pad">
+              <p><b>Eliane Tomás</b> • <a id="igLink" href="#" rel="noopener">@eliane_ptomas</a></p>
+              <p style="margin-top:10px">
+                O Método PAR nasceu para empresárias que querem crescer sem se desconectar de quem são.
+                Aqui você vai construir um modelo de negócio com estrutura e escalabilidade,
+                respeitando comportamento, energia e decisões — com um processo guiado, prático e aplicável.
+              </p>
+
+              <div class="note">
+                “Ação de ações assertivas” — o mantra é simples: decisão boa + execução consistente = resultado.
+              </div>
+
+              <div class="ctaRow" style="margin-top:14px">
+                <a class="btn primary" id="aboutCta" href="#investimento">Quero entrar</a>
+                <a class="btn ghost" id="aboutWhats" href="#" rel="noopener">Chamar no WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="titleRow">
+          <div>
+            <h2>Dúvidas frequentes</h2>
+            <p class="sub">Sem mistério. Sem malabarismo. Só clareza.</p>
+          </div>
+        </div>
+
+        <details>
+          <summary>Isso é um curso gravado?</summary>
+          <p>Não. Existem aulas complementares gravadas, mas o coração do PAR é um processo de 90 dias com encontros em grupo, acompanhamento e plano de implementação.</p>
+        </details>
+
+        <details>
+          <summary>Preciso “aparecer” nas redes?</summary>
+          <p>O PAR trabalha posicionamento digital. Se você não quer aparecer de forma alguma, provavelmente não é o melhor momento. Mas dá para ajustar formato, narrativa e nível de exposição com estratégia.</p>
+        </details>
+
+        <details>
+          <summary>Tem garantia?</summary>
+          <p>Sim. Você tem <b>7 dias de garantia</b> após o pagamento. Se o programa não corresponder às expectativas, devolvemos 100% do investimento — sem perguntas. A garantia é válida conforme os termos de uso e políticas do checkout.</p>
+        </details>
+
+        <details>
+          <summary>Como faço a inscrição?</summary>
+          <p>Clique em “Quero garantir minha vaga”. O botão pode levar ao checkout Kiwify ou WhatsApp, dependendo da sua operação.</p>
+        </details>
+
+        <details>
+          <summary>O programa promete faturamento específico?</summary>
+          <p>Não. O PAR entrega direção, estrutura e acompanhamento. Resultado depende de execução, contexto e consistência. Promessa mágica costuma custar caro — e geralmente vem com letra miúda.</p>
+        </details>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <div>© <span id="year"></span> Método PAR • Todos os direitos reservados.</div>
+        <div>
+          <a href="#" id="privacy">Política de privacidade</a> •
+          <a href="#" id="terms">Termos de uso</a>
+        </div>
+      </div>
+      <p style="margin:10px 0 0">
+        Aviso: este site é informativo. Para pagamentos, garantias e reembolso, use as regras do seu checkout.
+      </p>
+    </div>
+  </footer>
+
+  <!-- CTA fixo no mobile -->
+  <div class="stickyCta" aria-label="Chamada para ação fixa">
+    <div class="wrap">
+      <a class="btn primary" id="stickyCheckout" href="#" rel="noopener" style="flex:1">Quero entrar</a>
+      <a class="btn ghost" id="stickyWhats" href="#" rel="noopener" style="flex:1">WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    /**
+     * ===========================
+     * CONFIG (edite aqui)
+     * ===========================
+     */
+    const CONFIG = {
+      checkoutUrl: "https://pay.kiwify.com.br/5IHp3B1", // link do checkout (Kiwify, Hotmart, etc)
+      whatsappNumber: "5511991988058", 
+      instagramUrl: "https://instagram.com/eliane_ptomas",
+      // Timer opcional (bom para campanhas). Se não quiser, coloque showTimer:false
+      showTimer: false,
+      // Ex.: "2026-02-05T23:59:59-03:00"  (horário do Brasil)
+      offerEndsAt: "2026-12-31T23:59:59-03:00",
+      privacyUrl: "privacidade.html",
+      termsUrl: "termos.html",
+    };
+
+    const qs = (s)=>document.querySelector(s);
+
+    function buildWhatsLink(){
+      const msg = encodeURIComponent("Olá, quero entrar no Método PAR. Pode me orientar?");
+      const num = (CONFIG.whatsappNumber || "").replace(/\D/g,"");
+      if(!num || num.length < 10) return "#";
+      return `https://wa.me/${num}?text=${msg}`;
+    }
+
+    function wireLinks(){
+      const whats = buildWhatsLink();
+
+      // Checkout buttons
+      ["#checkoutBtn","#stickyCheckout"].forEach(id=>{
+        const el = qs(id);
+        if(el) el.href = CONFIG.checkoutUrl;
+      });
+
+      // Whats buttons
+      ["#heroWhats","#whatsBtn","#aboutWhats","#stickyWhats"].forEach(id=>{
+        const el = qs(id);
+        if(el) el.href = whats;
+      });
+
+      // Instagram
+      const ig = qs("#igLink");
+      if(ig) ig.href = CONFIG.instagramUrl;
+
+      // Footer policies
+      const p = qs("#privacy");
+      const t = qs("#terms");
+      if(p) p.href = CONFIG.privacyUrl;
+      if(t) t.href = CONFIG.termsUrl;
+    }
+
+    function smoothAnchors(){
+      document.addEventListener("click", (e)=>{
+        const a = e.target.closest("a[href^='#']");
+        if(!a) return;
+        const id = a.getAttribute("href");
+        if(id.length < 2) return;
+        const target = document.querySelector(id);
+        if(!target) return;
+        e.preventDefault();
+        target.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    }
+
+    function pad2(n){ return String(n).padStart(2,"0"); }
+
+    function startTimer(){
+      const timer = qs("#timer");
+      if(!timer) return;
+
+      if(!CONFIG.showTimer){
+        timer.classList.remove("on");
+        return;
+      }
+
+      timer.classList.add("on");
+      const end = new Date(CONFIG.offerEndsAt).getTime();
+
+      function tick(){
+        const now = Date.now();
+        let diff = Math.max(0, end - now);
+
+        const days = Math.floor(diff / (1000*60*60*24));
+        diff -= days * (1000*60*60*24);
+        const hrs  = Math.floor(diff / (1000*60*60));
+        diff -= hrs * (1000*60*60);
+        const mins = Math.floor(diff / (1000*60));
+        diff -= mins * (1000*60);
+        const secs = Math.floor(diff / 1000);
+
+        qs("#d").textContent = pad2(days);
+        qs("#h").textContent = pad2(hrs);
+        qs("#m").textContent = pad2(mins);
+        qs("#s").textContent = pad2(secs);
+
+        if(end <= now){
+          // quando acabar, você pode trocar o CTA/mostrar aviso.
+          // Ex.: timer.classList.remove("on");
+        }
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    function init(){
+      wireLinks();
+      smoothAnchors();
+      startTimer();
+      qs("#year").textContent = new Date().getFullYear();
+    }
+    init();
+  </script>
+
+  
+  <script>
+    (function(){
+      const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+
+      document.querySelectorAll('[data-li-carousel]').forEach((root) => {
+        const viewport = root.querySelector('.liViewport');
+        const track = root.querySelector('.liTrack');
+        const slides = Array.from(root.querySelectorAll('.liSlide'));
+        const prevBtn = root.querySelector('.liPrev');
+        const nextBtn = root.querySelector('.liNext');
+        const dotsWrap = root.querySelector('.liDots');
+        const counter = root.querySelector('.liCounter');
+
+        if (!viewport || !track || slides.length === 0) return;
+
+        let idx = 0;
+        const total = slides.length;
+
+        // dots
+        const dots = slides.map((_, i) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'liDot';
+          b.setAttribute('aria-label', 'Ir para depoimento ' + (i + 1));
+          b.addEventListener('click', () => go(i));
+          return b;
+        });
+        if (dotsWrap) {
+          dotsWrap.innerHTML = '';
+          dots.forEach(d => dotsWrap.appendChild(d));
+        }
+
+        function updateUI() {
+          track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+          if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+
+          if (prevBtn) prevBtn.disabled = idx === 0;
+          if (nextBtn) nextBtn.disabled = idx === total - 1;
+
+          dots.forEach((d, i) => d.setAttribute('aria-current', i === idx ? 'true' : 'false'));
+        }
+
+        function go(i) {
+          idx = clamp(i, 0, total - 1);
+          updateUI();
+        }
+
+        function step(dir) {
+          go(idx + dir);
+        }
+
+        // Buttons + click zones
+        if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); step(-1); });
+        if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); step(1); });
+
+        // Evita conflito entre clique nas setas e swipe
+        if (prevBtn) prevBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
+        if (nextBtn) nextBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
+
+        // keyboard
+        viewport.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+          if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+        });
+
+        // swipe (pointer events)
+        let startX = 0, startY = 0, dragging = false;
+        viewport.addEventListener('pointerdown', (e) => {
+          // Se o usuário clicar em um controle (seta/dot), não inicia swipe
+          if (e.target.closest('.liNav') || e.target.closest('.liDot')) return;
+          dragging = true;
+          startX = e.clientX;
+          startY = e.clientY;
+          viewport.setPointerCapture(e.pointerId);
+        });
+viewport.addEventListener('pointerup', (e) => {
+          if (!dragging) return;
+          dragging = false;
+
+          const dx = e.clientX - startX;
+          const dy = e.clientY - startY;
+
+          // ignora gesto vertical
+          if (Math.abs(dy) > Math.abs(dx)) return;
+
+          const threshold = Math.min(90, viewport.clientWidth * 0.18);
+          if (dx > threshold) step(-1);
+          else if (dx < -threshold) step(1);
+        });
+viewport.addEventListener('pointercancel', () => { dragging = false; });
+
+        updateUI();
+      });
+    })();
+  </script>
+
+</body>
+</html>
